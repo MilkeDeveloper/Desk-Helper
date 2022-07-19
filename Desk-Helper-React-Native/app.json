@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Desk-Helper-React-Native",
+    "slug": "Desk-Helper-React-Native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
