@@ -5,7 +5,8 @@ import { SignIn } from './src/screens/SignIn';
 import { THEME } from './src/styles/theme';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { Loading } from './src/components/Loading';
-import { Home } from './src/components/Home';
+import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
 
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent
       />  
-      { fontsLoaded? <Home /> : <Loading /> }
+      { fontsLoaded? <Routes /> : <Loading /> }
     </NativeBaseProvider>
     
   );
