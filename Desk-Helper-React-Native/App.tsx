@@ -7,6 +7,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { Loading } from './src/components/Loading';
 import { Home } from './src/screens/Home';
 import { Routes } from './src/routes';
+import React from 'react';
 
 
 export default function App() {

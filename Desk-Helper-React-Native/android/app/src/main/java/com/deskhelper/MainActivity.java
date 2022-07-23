@@ -1,4 +1,4 @@
-package com.deskhelperreactnative;
+package com.deskhelper;
 
 import android.os.Build;
 import android.os.Bundle;

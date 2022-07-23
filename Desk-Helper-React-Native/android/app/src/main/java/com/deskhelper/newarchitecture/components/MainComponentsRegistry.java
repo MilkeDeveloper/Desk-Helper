@@ -1,4 +1,4 @@
-package com.deskhelperreactnative.newarchitecture.components;
+package com.deskhelper.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

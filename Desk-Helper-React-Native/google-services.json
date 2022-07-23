@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "934163786266",
+    "project_id": "deskhelper-818da",
+    "storage_bucket": "deskhelper-818da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934163786266:android:99eef461b605fd8676bfa3",
+        "android_client_info": {
+          "package_name": "com.deskhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934163786266-0s8u26656rp9s18qcunf0rnoed7mb1pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW1EC33Hi2lrUibpZBwaFKRKAQNG2FPX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934163786266-0s8u26656rp9s18qcunf0rnoed7mb1pr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934163786266-kib1i1dmjqq28p1orl0h1eis7uj6qude.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.deskhelper"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

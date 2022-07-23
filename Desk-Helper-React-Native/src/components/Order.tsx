@@ -1,5 +1,6 @@
 import { Box, HStack, VStack, Text, useTheme, Circle, Pressable, IPressableProps } from 'native-base';
 import { CircleWavyCheck, ClockAfternoon, Hourglass } from 'phosphor-react-native';
+import React from 'react';
 
 export type OrderProps = {
     id: string;
@@ -31,7 +32,7 @@ export function Order({ data, ...rest }: Props) {
 
             <VStack flex={1} my={5} ml={5}>
                 <Text color='white' fontSize='md' >
-                    PC - {data.patrimony}
+                    Equipamento - {data.patrimony}
                 </Text>
                 <HStack alignItems='center' >
                     <ClockAfternoon size={15} color={colors.gray[300]} />
