@@ -28,5 +28,6 @@ export function Routes() {
         <NavigationContainer>
            {user ? <AppRoutes /> : <SignIn /> }
         </NavigationContainer>
+        
     )
 }

@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, Text, useTheme, Circle, Pressable, IPressableProps } from 'native-base';
+import { Box, HStack, VStack, Text, useTheme, Circle, Pressable, IPressableProps, PresenceTransition } from 'native-base';
 import { CircleWavyCheck, ClockAfternoon, Hourglass } from 'phosphor-react-native';
 import React from 'react';
 
@@ -20,38 +20,56 @@ export function Order({ data, ...rest }: Props) {
   
     return (
     <Pressable {...rest}>
-        <HStack
-            bg='gray.600'
-            mb={4}
-            alignItems='center'
-            justifyContent='space-between'
-            rounded='sm'
-            overflow='hidden'
-        >
-            <Box h='full' w={2} bg={statusColor} />
+        <PresenceTransition visible={true} initial={{
+                        opacity: 0,
+                        scale: 1,
+                        translateY: -15
+                        }} animate={{
+                        opacity: 1,
+                        scale: 1,
+                        translateY: 0,
+                        transition: {
+                            duration: 500,
+                            bounciness: 1.5,
+                            delay: 150,
+                            type: 'timing'
+                        }
+                        }}
+                        >
+            <HStack
+                bg='gray.600'
+                mb={4}
+                alignItems='center'
+                justifyContent='space-between'
+                rounded='sm'
+                overflow='hidden'
+            >
+                <Box h='full' w={2} bg={statusColor} />
 
-            <VStack flex={1} my={5} ml={5}>
-                <Text color='white' fontSize='md' >
-                    Equipamento - {data.patrimony}
-                </Text>
-                <HStack alignItems='center' >
-                    <ClockAfternoon size={15} color={colors.gray[300]} />
-                    <Text color='gray.200' fontSize='xs' ml={1}>
-                        {data.when}
+                <VStack flex={1} my={5} ml={5}>
+                    <Text color='white' fontSize='md' >
+                        Equipamento - {data.patrimony}
                     </Text>
-                </HStack>
+                    <HStack alignItems='center' >
+                        <ClockAfternoon size={15} color={colors.gray[300]} />
+                        <Text color='gray.200' fontSize='xs' ml={1}>
+                            {data.when}
+                        </Text>
+                    </HStack>
 
-            </VStack>
+                </VStack>
 
-            <Circle bg='gray.500' h={12} w={12} mr={5} >
-                {
-                    data.status === 'closed' 
-                        ? <CircleWavyCheck size={24} color={statusColor} />
-                        : <Hourglass size={24} color={statusColor} />
-                }
-            </Circle>
-            
-        </HStack>
+                <Circle bg='gray.500' h={12} w={12} mr={5} >
+                    {
+                        data.status === 'closed' 
+                            ? <CircleWavyCheck size={24} color={statusColor} />
+                            : <Hourglass size={24} color={statusColor} />
+                    }
+                </Circle>
+                
+            </HStack>
+        </PresenceTransition>
+        
     </Pressable>
   );
 }

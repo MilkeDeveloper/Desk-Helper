@@ -81,7 +81,7 @@ export function Home() {
       >
         <HStack alignItems='center'>
           <LogoApp />
-          <Text color='secondary.700' fontSize='xl' fontWeight='normal'>Desk</Text>
+          <Text color='error.700' fontSize='xl' fontWeight='normal'>Desk</Text>
           <Text color='gray.300' fontSize='xl' fontWeight='normal'>Helper</Text>
         </HStack>
         

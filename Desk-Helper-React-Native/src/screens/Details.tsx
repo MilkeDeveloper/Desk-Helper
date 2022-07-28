@@ -1,4 +1,4 @@
-import { VStack,Text, HStack, useTheme, ScrollView, Box } from 'native-base';
+import { VStack,Text, HStack, useTheme, ScrollView, Box, PresenceTransition } from 'native-base';
 import { Header } from '../components/Header';
 
 import Firestore from '@react-native-firebase/firestore';
@@ -118,6 +118,22 @@ export function Details() {
         </HStack>
         
         <ScrollView mx={5} showsVerticalScrollIndicator={false} >
+        <PresenceTransition visible={true} initial={{
+                        opacity: 0,
+                        scale: 1,
+                        translateY: -25
+                        }} animate={{
+                        opacity: 1,
+                        scale: 1,
+                        translateY: 0,
+                        transition: {
+                            duration: 500,
+                            bounciness: 1.5,
+                            delay: 150,
+                            type: 'timing'
+                        }
+                        }}
+                        >
             <CardDetails
                 title='equipamento'
                 desc={`Patrimonio ${order.patrimony}`}
@@ -149,6 +165,7 @@ export function Details() {
                     />
                 }
             </CardDetails> 
+            </PresenceTransition>
         </ScrollView>
         {
             order.status === 'open' &&

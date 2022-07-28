@@ -1,4 +1,4 @@
-import { VStack, HStack, Text, Box, useTheme } from 'native-base';
+import { VStack, HStack, Text, Box, useTheme, PresenceTransition } from 'native-base';
 import { IconProps } from 'phosphor-react-native';
 import { ReactNode } from 'react';
 import React from 'react';
@@ -16,8 +16,9 @@ export function CardDetails({ title, desc, footer = null, icon: Icon, children }
 
     return (
     <VStack mt={5} bg='gray.600' p={5} rounded='sm'>
+        
         <HStack alignItems='center' mb={4}>
-            <Icon color={colors.primary[700]} />
+            <Icon color={colors.green[300]} />
             <Text ml={2} color='gray.100' fontSize='sm' textTransform='uppercase'>
                 {title}
             </Text>

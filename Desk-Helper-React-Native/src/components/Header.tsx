@@ -28,8 +28,13 @@ export function Header({ title, ...rest} : Props) {
         {...rest}
     >
         <IconButton 
-            icon={<CaretLeft color={colors.gray[200]} size={24} />}
+            icon={<CaretLeft color={colors.gray[200]} size={24}  />}
             onPress={ handleBackHome }
+            _focus={{
+                borderWidth: 1,
+                borderColor: "gray.300",
+                bg: "gray.700"
+            }} 
         />
 
         <Heading color='gray.100' textAlign='center' fontSize='lg' flex={1} ml={-6}>
